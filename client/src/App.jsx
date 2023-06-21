@@ -1,13 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import Header from "./pages/Header";
-import CreateEvents from "./pages/createEvents";
+import { Header,CreateEvents } from "./pages";
 
 export default function App() {
   return (
    <>
     <Routes>
       <Route path="" element={<Header />} />
-      <Route path="/events" element={<CreateEvents />} />
+      <Route path="/events" element={< CreateEvents />} />
     </Routes>
    </>
   )
