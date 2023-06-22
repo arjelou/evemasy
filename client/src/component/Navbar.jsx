@@ -1,6 +1,6 @@
 import React from 'react';
 import navLinks from '../constant/navLinks';
-import { menu, close } from '../assets';
+import { menu, close, logo } from '../assets';
 
 export default class Navbar extends React.Component {
     constructor(props) {
@@ -18,8 +18,10 @@ export default class Navbar extends React.Component {
       
   render() {
     return (
+        
     <nav className='w-full py-6 justify-between items-center navbar'>
         {/* Desktop and tablet view */}
+            <img src={logo} alt='Evemasy-logo' className='w-[138px] h-[38px] absolute items-center'/> 
         <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
             {navLinks.map((navLink, index) =>(
             <li key={navLink.id}
@@ -40,11 +42,8 @@ export default class Navbar extends React.Component {
         {/* Mobile view */} 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
             <ul className='flex'>
-                <li className=' text-white font-poppins font-normal cursor-pointer bg-slate-500 px-2 rounded-sm py-2 mr-5'>
+                <li className=' text-white font-poppins font-normal cursor-pointer bg-slate-500 px-2 rounded-sm py-2 mr-2.5'>
                     Sign up
-                </li>
-                <li className=' text-white font-poppins font-normal cursor-pointer px-4 rounded-sm py-2 outline-slate-500 outline'>
-                    Login
                 </li>
             </ul> 
             
@@ -55,14 +54,19 @@ export default class Navbar extends React.Component {
 
             <div className={`${this.state.toggle ? 'flex' : 'hidden'} p-6 bg-black absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
                 <ul className='list-none flex flex-col justify-end items-center flex-1'>
-                    {navLinks.map((navLink, index) =>(
-                    <li key={navLink.id}
-                        className={`${index === navLink.length-1 ? 'mr-0' : 'mb-4'} text-white font-poppins font-normal cursor-pointer`}>
-                        <a href={navLink.id}>
-                            {navLink.title}
-                        </a>
-                    </li>
-                    ))}
+                    <>
+                        {navLinks.map((navLink, index) =>(
+                            <li key={navLink.id}
+                                className={`${index === navLink.length-1 ? 'mr-0' : 'mb-4'} text-white font-poppins font-normal cursor-pointer`}>
+                                <a href={navLink.id}>
+                                    {navLink.title}
+                                </a>
+                            </li>
+                        ))}
+                        <li className=' text-white font-poppins font-normal cursor-pointer px-4 rounded-sm py-2 outline-slate-500 outline'>
+                            Login
+                        </li>
+                    </>    
                 </ul>
             </div>
         </div>
