@@ -1,7 +1,7 @@
-import Header from "./Header";
+import Home from "./Home";
 import CreateEvents from "./createEvents";
 
 export {
-    Header,
+    Home,
     CreateEvents,
 };

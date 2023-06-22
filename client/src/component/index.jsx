@@ -1,9 +1,5 @@
-import eventCreation from "./eventCreation";
-import eventList from "./eventList";
-import eventUpcomming from "./eventUpcomming";
+import Navbar from "./Navbar"
 
-export {
-    eventCreation,
-    eventList,
-    eventUpcomming
-};
+export{
+    Navbar
+}
