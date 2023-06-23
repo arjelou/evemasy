@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import { Home,CreateEvents } from "./pages/UserDashboard";
-import Login from "./pages/login";
-import Signup from "./pages/singup";
+import { Home, Login, Signup } from "./pages";
+import UserDashboard from "./pages/UserDashboard/dashboard";
+
+import AddNewEvent from "./pages/UserDashboard/components/createEvents";
 
 
 export default function App() {
@@ -9,13 +10,16 @@ export default function App() {
    <>
     <Routes>
       
-      <Route path="" element={<Home />}>
-        <Route path="/events" element={<CreateEvents />} />
-      </Route>
+      <Route path="" element={<Home />} />
 
       {/* Login/Signup route */}
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+
+      {/* User Dashboard */}
+      <Route path="/dashboard" element={<UserDashboard />}>
+        <Route path="add-event" element={<AddNewEvent />} />
+      </Route>
 
     </Routes>
    </>

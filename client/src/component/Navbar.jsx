@@ -1,5 +1,5 @@
 import React from 'react';
-import navLinks from '../constant/navLinks';
+import { navLinks } from '../constant/navLinks';
 import { menu, close, logo } from '../assets';
 
 export default class Navbar extends React.Component {
