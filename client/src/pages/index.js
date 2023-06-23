@@ -1,7 +1,7 @@
-import Home from "./Home";
-import CreateEvents from "./createEvents";
+import Login from "./login";
+import Signup from "./signup";
 
-export {
-    Home,
-    CreateEvents,
-};
+export{
+    Login,
+    Signup
+}
