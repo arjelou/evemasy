@@ -6,7 +6,9 @@ export default class login extends React.Component {
       return (
         <>
         <div className='flex absolute ml-20 mt-3'>
-            <img src={logo} />
+            <a href='/'>
+                <img src={logo} />
+            </a>
         </div>
         <div className='h-screen flex items-center justify-center'>
             <form className='bg-slate-300 p-7 rounded-sm w-[350px]'>
@@ -17,7 +19,7 @@ export default class login extends React.Component {
                     <p>
                     New to EveMasy?
                     <span className='text-orange-400'>
-                        <a href='#'> Create an account</a>
+                        <a href='/signup'> Create an account</a>
                     </span>
                     </p>
                 </div>
