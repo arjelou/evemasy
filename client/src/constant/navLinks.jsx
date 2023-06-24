@@ -27,8 +27,13 @@ export const dashboards = [
         'icon': event
     },
     {
-        'id': '/upcoming-event',
-        'title': 'Upcoming Event',
+        'id': '/dashboard/event-lists',
+        'title': 'List of Events',
+        'icon': upcomingevent
+    },
+    {
+        'id': '/upcoming-events',
+        'title': 'Upcoming Events',
         'icon': upcomingevent
     }
 ]

@@ -1,6 +1,7 @@
 import React from 'react';
 import { navLinks } from '../constant/navLinks';
 import { menu, close, logo } from '../assets';
+import { NavLink } from 'react-router-dom';
 
 export default class Navbar extends React.Component {
     constructor(props) {
@@ -32,14 +33,14 @@ export default class Navbar extends React.Component {
             </li>
             ))}
             <li className=' text-white font-poppins font-normal cursor-pointer bg-slate-500 px-4 rounded-sm py-2 mr-5'>
-               <a href="/signup">
+               <NavLink to='/signup'>
                 Sign up
-               </a>
+               </NavLink>
             </li>
             <li className=' text-white font-poppins font-normal cursor-pointer px-4 rounded-sm py-2 outline-slate-500 outline'>
-                <a href="/login">
-                    Login
-                </a>
+                <NavLink to='/login'>
+                 Login
+                </NavLink>
             </li>
         </ul>
         

@@ -1,5 +1,6 @@
 import React from 'react';
-import {logo} from '../assets'
+import {logo} from '../assets';
+import { NavLink } from 'react-router-dom';
 
 export default class signup extends React.Component {
   render(){
@@ -19,7 +20,9 @@ export default class signup extends React.Component {
                     <p>
                     Already have an account?
                     <span className='text-orange-400'>
-                        <a href='/login'> Login</a>
+                        <NavLink to='/login'>
+                            Login
+                        </NavLink>
                     </span>
                     </p>
                 </div>
