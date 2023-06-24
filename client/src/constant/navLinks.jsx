@@ -1,4 +1,5 @@
-import { sidebar, event, upcomingevent } from "../assets"
+import { sidebar, event, upcomingevent } from "../assets";
+
 export const navLinks = [
     {
         'id': '/',
@@ -16,12 +17,12 @@ export const navLinks = [
 
 export const dashboards = [
     {
-        'id': '/',
+        'id': '/dashboard',
         'title': 'Dashboard',
         'icon': sidebar
     },
     {
-        'id': '/add-event',
+        'id': '/dashboard/add-event',
         'title': 'Add Event',
         'icon': event
     },
