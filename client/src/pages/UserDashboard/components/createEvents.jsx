@@ -3,7 +3,7 @@ import React from "react";
 export default class createEvents extends React.Component{
   render() {
     return (
-      <div className="sidebar fixed top-0 bottom-0 lg:left-0 w-full ml-[230px] overflow-x-auto font-poppins font-medium text-start px-3">
+      <div className="bg-white sidebar fixed top-0 bottom-0 lg:left-0 w-full ml-[230px] overflow-x-auto font-poppins font-medium text-start px-3">
         <div className="h-screen flex items-center justify-center">
           <div className="w-[500px] mr-[230px] shadow-md">
           <form className='bg-slate-300 p-7 rounded-sm'>

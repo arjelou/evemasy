@@ -32,7 +32,7 @@ export const dashboards = [
         'icon': upcomingevent
     },
     {
-        'id': '/upcoming-events',
+        'id': '/dashboard/upcoming-events',
         'title': 'Upcoming Events',
         'icon': upcomingevent
     }

@@ -4,7 +4,7 @@ import { FaEdit, FaTrashAlt } from "react-icons/fa";
 export default class listEvents extends React.Component{
   render() {
     return (
-      <div className="sidebar fixed top-0 bottom-0 lg:left-0 w-full ml-[230px] overflow-x-auto font-poppins font-medium text-start px-3">
+      <div className="bg-white sidebar fixed top-0 bottom-0 lg:left-0 w-full ml-[230px] overflow-x-auto font-poppins font-medium text-start px-3">
         <div className="h-screen flex justify-center mt-10">
           <div className="w-full mr-[230px] ">
                 <h2 className='font-poppins font-bold text-3xl mb-3'>
