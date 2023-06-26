@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { dashboards } from '../../constant/navLinks';
 import { logout } from '../../assets';
 import { NavLink } from "react-router-dom";
+import Content from './components/content';
 
 export default class sidebar extends React.Component {
   render() {
@@ -44,7 +45,9 @@ export default class sidebar extends React.Component {
                 </ul>
             </div>
         </div>
-        
+        <div className='ml-[232px]'>
+            <Content />
+        </div>
       
             <div>
             <Outlet />
