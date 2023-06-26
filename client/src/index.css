@@ -18,6 +18,24 @@
   scroll-behavior: smooth;
 }
 
+.primaryColor{
+  background-color: #025464;
+}
+.secondaryColor{
+  background-color: #E57C23;
+}
+.secondaryColorHover:hover{
+  background-color: #cc701f;
+}
+.secondaryColorBorder{
+  border-color: #E57C23;
+}
+.lastColor{
+  background-color: #E8AA42;
+}
+.primaryColorText{
+  color: hsl(0, 33%, 96%) !important;
+}
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,

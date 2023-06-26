@@ -2,7 +2,7 @@ import React from 'react';
 import { navLinks } from '../constant/navLinks';
 import { menu, close, logo } from '../assets';
 import { NavLink } from 'react-router-dom';
-
+import '../index.css'
 export default class Navbar extends React.Component {
     constructor(props) {
         super(props);
@@ -25,25 +25,27 @@ export default class Navbar extends React.Component {
         <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
             {navLinks.map((navLink, index) =>(
             <li key={navLink.id}
-                className={`${index === navLink.length-1 ? 'mr-0' : 'mr-10'} text-white font-poppins font-normal cursor-pointer`}>
+                className={`${index === navLink.length-1 ? 'mr-0' : 'mr-10'} primaryColorText font-poppins font-normal cursor-pointer`}>
                 <a href={navLink.id}>
                     {navLink.title}
                 </a>
             </li>
             ))}
-            <li className=' text-white font-poppins font-normal cursor-pointer bg-slate-500 px-4 rounded-sm py-2 mr-5 hover:bg-slate-600'>
+            <li className='secondaryColor secondaryColorHover primaryColorText font-poppins font-normal cursor-pointer px-4 rounded-sm py-2 mr-5'>
                <NavLink to='/signup'>
                 Sign up
                </NavLink>
             </li>
             <li 
             
-            className=' text-white font-poppins font-normal cursor-pointer px-4 rounded-sm py-2 border border-slate-500 hover:bg-slate-600 hover:border-slate-600'>
+            className='primaryColorText secondaryColorHover secondaryColorBorder font-poppins font-normal cursor-pointer px-4 rounded-sm py-2 border'>
                 <NavLink to='/login'>
                  Login
                 </NavLink>
             </li>
+            
         </ul>
+       
         {/* Mobile view */} 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
             <ul className='flex'>
