@@ -25,13 +25,6 @@ export default class signup extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault();
-
-        // const user = {
-        //     fullname: event.target.fullname.value,
-        //     email: event.target.email.value,
-        //     password: event.target.password.value
-        // }
-
         axios.post(`http://localhost:5000/api/user/signup`, {
             fullname: event.target.fullname.value,
             email: event.target.email.value,

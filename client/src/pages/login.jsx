@@ -1,8 +1,23 @@
 import React from 'react';
 import {logo} from '../assets';
 import { NavLink } from 'react-router-dom';
+import axios from 'axios';
 
 export default class login extends React.Component {
+
+    handleSubmit = event => {
+        event.preventDefault();
+        axios.post(`http://localhost:5000/api/user/login`, {
+            email: event.target.email.value,
+            password: event.target.password.value
+        })
+        .then(res => {
+            console.log(res.data);
+            alert(`login successful...${this.email}`);
+            window.location.href='/dashboard'
+        })
+    }
+
   render(){
       return (
         <>
@@ -12,7 +27,8 @@ export default class login extends React.Component {
             </a>
         </div>
         <div className='h-screen flex items-center justify-center'>
-            <form className='bg-slate-300 p-7 rounded-sm w-[350px]'>
+            <form onSubmit={this.handleSubmit}
+            className='bg-slate-300 p-7 rounded-sm w-[350px]'>
                 <h2 className='font-poppins font-bold text-3xl mb-3'>
                     Login
                 </h2>
@@ -28,11 +44,11 @@ export default class login extends React.Component {
                 </div>
 
                 <label className='block'>
-                    <input type='email' placeholder='Email'
+                    <input type='email' placeholder='Email' name='email'
                     className='border border-slate-400 py-3 block mt-1 px-2 bg-slate-300 rounded-sm placeholder-slate-500 focus:outline-none focus:border-orange-600 font-poppins font-medium focus:right-1 sm:text-sm w-full'/>
                 </label>
                 <label className='block mt-3'>
-                    <input type='password' placeholder='Password'
+                    <input type='password' placeholder='Password' name='password'
                     className='border border-slate-400 py-3 block mt-1 px-2 bg-slate-300 rounded-sm placeholder-slate-500 focus:outline-none focus:border-orange-600 font-poppins font-medium focus:right-1 sm:text-sm w-full'/>
                 </label>
                 {/* Forgot password link */}

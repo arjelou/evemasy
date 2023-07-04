@@ -12,6 +12,7 @@ const signup = async (req, res) =>{
 
     try {
         await createdUser.save();
+        console.log(createdUser);
     }catch(err){
         console.log(err);
     }
