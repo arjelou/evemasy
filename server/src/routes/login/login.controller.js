@@ -13,7 +13,6 @@ const login = async (req, res, next ) => {
         const error = new  HttpError(
             'Login failed, please try again!'
         );
-
         return next(error);
     }
 
@@ -21,11 +20,11 @@ const login = async (req, res, next ) => {
         const error = new  HttpError(
             'Invalid credentials, please try again!!'
         );
-        
+        res.json({message:'Invalid credentials, please try again!!'})
         return next(error);
     }
 
-    res.json({message:'Log in!'})
+    res.json({message:'success'})
 }
 
 exports.login = login;

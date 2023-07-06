@@ -117,7 +117,7 @@ export default class content extends React.Component {
         </div>
         
         {/* PUBLIC EVENTS */}
-        <div className='bg-slate-600 h-screen'>
+        <div className='h-screen'>
             <h1 className='text-2xl font-poppins font-medium'>
                 Public events
             </h1>

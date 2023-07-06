@@ -12,7 +12,8 @@ const signup = async (req, res) =>{
 
     try {
         await createdUser.save();
-        console.log(createdUser);
+        res.json({message:'success'})
+
     }catch(err){
         console.log(err);
     }
