@@ -14,7 +14,7 @@ export default class login extends React.Component {
         .then(res => {
             if(res.data.message === 'success') {
                 this.notify()
-                // window.location.href='/dashboard'
+                window.location.href='/dashboard'
             }else{
                 this.notifyError()
             }

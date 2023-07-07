@@ -34,7 +34,7 @@ export default class signup extends React.Component {
 
         <div className='flex absolute ml-20 mt-3'>
             <a href='/'>
-                <img src={logo} />
+                <img src={logo} alt='logo'/>
             </a>
         </div>
         <div className='h-screen flex items-center justify-center'>
